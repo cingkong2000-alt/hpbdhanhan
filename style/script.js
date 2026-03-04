@@ -43,15 +43,6 @@ const heartGifs = [
 let letterText = [];
 
 async function loadLetter() {
-  try {
-    const response = await fetch('style/letter.txt');
-    const text = await response.text();
-    letterText = text
-      .split(/\n\s*\n/)
-      .map(p => p.trim())
-      .filter(p => p !== '');
-  } catch (error) {
-    console.error('Error loading letter:', error);
     letterText = [
             "Thư này gửi đến người mà anh đang âm thầm đăng ký quyền ưu tiên - bé Hân Hân!",
             "Hôm nay là một ngày đặc biệt, ngày mà mẹ em đưa đến thế gian này một nàng công chúa dễ thương,",
@@ -64,7 +55,6 @@ async function loadLetter() {
             "Sinh nhật vui vẻ nha!",
             "- Công Nguyễn -"
           ];
-  }
 }
 loadLetter();
 
