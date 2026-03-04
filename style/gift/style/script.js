@@ -17,17 +17,7 @@ let messages = [];
 
 // === LOAD MESSAGES ===
 async function loadMessages() {
-  try {
-    const response = await fetch('./style/mess.txt');
-    const text = await response.text();
-    messages = text
-      .split(/\n/)
-      .map(m => m.trim())
-      .filter(m => m !== '');
-  } catch (error) {
-    console.error('Error loading messages:', error);
     messages = ['Sinh nhật vui vẻ nha bé Hân ❤️'];
-  }
 }
 loadMessages();
 
